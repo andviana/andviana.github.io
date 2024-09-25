@@ -4,8 +4,8 @@
 
 # Projeto de Exemplo do Github 🤓
 
-[House Prices](https://andviana.github.io/housePrices/)
-[Exemplo Aula](https://andviana.github.io/exemploAula/)
+- [House Prices](https://andviana.github.io/housePrices/)
+- [Exemplo Aula](https://andviana.github.io/exemploAula/)
 
 ## Autores
 
