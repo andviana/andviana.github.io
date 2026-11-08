@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anderson Coelho Viana | Analista de TI e Pesquisador</title>
+<meta name="description" content="Anderson Coelho Viana: analista de tecnologia da informação na UFRA, mestrando na UFPA, pesquisador no LNEOC e extensionista em saúde com pacientes de Parkinson.">
+<meta property="og:title" content="Anderson Coelho Viana">
+<meta property="og:description" content="Analista de TI (UFRA), mestrando (UFPA), pesquisador no LNEOC e extensionista em projetos de saúde com pacientes de Parkinson.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/foto.jpg">
+<style>
+:root{
+  --bg:#faf8f4; --surface:#ffffff; --text:#1d2a2e; --muted:#62707a; --line:#e6e1d6;
+  --accent:#0b5d57; --accent-2:#b0813a; --accent-soft:#e4f0ee; --on-accent:#ffffff;
+  --shadow:0 1px 2px rgba(20,30,30,.04),0 8px 24px rgba(20,30,30,.06);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1517; --surface:#151e21; --text:#e8eeee; --muted:#93a1a6;
+    --line:#253236; --accent:#5cc6b8; --accent-2:#d6a85a; --accent-soft:#14302e; --on-accent:#0e1517;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1517; --surface:#151e21; --text:#e8eeee; --muted:#93a1a6;
+  --line:#253236; --accent:#5cc6b8; --accent-2:#d6a85a; --accent-soft:#14302e; --on-accent:#0e1517;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--accent-2)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;margin:0}
+
+/* layout */
+.layout{max-width:1120px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:300px 1fr;gap:64px}
+aside.profile{position:sticky;top:0;align-self:start;height:100vh;padding:56px 0 32px;display:flex;flex-direction:column;gap:22px;overflow-y:auto}
+main{padding:56px 0 40px;min-width:0}
+
+/* sidebar */
+.photo{width:168px;height:168px;border-radius:50%;overflow:hidden;border:4px solid var(--surface);box-shadow:var(--shadow),0 0 0 2px var(--accent-2)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.profile h1{font-size:2rem;line-height:1.12}
+.profile .role{color:var(--muted);font-size:.98rem;margin:8px 0 0}
+.profile .role b{color:var(--accent);font-weight:600}
+.menu{display:flex;flex-direction:column;gap:2px;margin-top:4px}
+.menu a{text-decoration:none;color:var(--muted);font-size:.95rem;padding:5px 0 5px 14px;border-left:2px solid var(--line);transition:.15s}
+.menu a:hover,.menu a.on{color:var(--accent);border-left-color:var(--accent-2)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.links a{font-size:.85rem;font-weight:600;text-decoration:none;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links a.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.links a.primary:hover{opacity:.9;color:var(--on-accent)}
+#theme{align-self:flex-start;border:0;background:none;color:var(--muted);cursor:pointer;font:inherit;font-size:.85rem;padding:0}
+#theme:hover{color:var(--accent)}
+
+/* sections */
+section{padding:0 0 56px}
+.eyebrow{font:600 .78rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);margin-bottom:10px;display:block}
+h2{font-size:1.9rem;margin-bottom:22px}
+.lead{font-family:var(--serif);font-size:1.3rem;line-height:1.55;max-width:62ch;margin:0 0 18px}
+.prose{max-width:66ch;color:var(--muted);margin:0 0 14px}
+.prose a{font-weight:500}
+
+/* timeline */
+.timeline{position:relative;margin:0;padding:0 0 0 28px;list-style:none}
+.timeline::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.timeline li{position:relative;padding-bottom:26px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-28px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--line)}
+.timeline li.now::before{border-color:var(--accent);background:var(--accent)}
+.when{font:600 .8rem/1.4 var(--sans);color:var(--accent-2);letter-spacing:.06em;text-transform:uppercase}
+.timeline h3{font-size:1.15rem;margin:2px 0 2px}
+.timeline p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card .tag{align-self:flex-start;background:var(--accent-soft);color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:12px}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card a.more{margin-top:auto;padding-top:14px;font-size:.9rem;font-weight:600;text-decoration:none}
+.card a.more::after{content:" →"}
+
+/* chips and lists */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);background:var(--surface);padding:5px 14px;border-radius:99px;font-size:.9rem}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.cols h3{font-size:1.05rem;margin-bottom:10px;color:var(--accent)}
+.plain{margin:0;padding:0;list-style:none;font-size:.95rem}
+.plain li{padding:8px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.plain li:last-child{border-bottom:0}
+.plain b{color:var(--text);font-weight:600}
+details{margin-top:18px}
+summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:.95rem}
+.small{font-size:.9rem;color:var(--muted)}
+
+footer{border-top:1px solid var(--line);padding:24px 0 48px;color:var(--muted);font-size:.85rem}
+
+/* mobile and tablet */
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0}
+  aside.profile{position:static;height:auto;padding:40px 0 24px;align-items:center;text-align:center;overflow:visible}
+  .menu{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:4px 14px}
+  .menu a{border-left:0;border-bottom:2px solid transparent;padding:2px 0}
+  .menu a:hover,.menu a.on{border-bottom-color:var(--accent-2)}
+  .links{justify-content:center;margin-top:0}
+  #theme{align-self:center}
+  main{padding-top:24px}
+}
+@media print{aside.profile{position:static;height:auto}#theme,.menu{display:none}}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<aside class="profile">
+  <div class="photo"><img src="assets/foto.jpg" alt="Foto de Anderson Coelho Viana"></div>
+  <div>
+    <h1>Anderson Coelho Viana</h1>
+    <p class="role"><b>Analista de TI</b> na UFRA<br>Mestrando na UFPA · Pesquisador</p>
+  </div>
+  <nav class="menu" aria-label="Seções">
+    <a href="#sobre">Sobre</a>
+    <a href="#atuacao">Atuação</a>
+    <a href="#trajetoria">Trajetória</a>
+    <a href="#pesquisa">Pesquisa e extensão</a>
+    <a href="#formacao">Formação</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="links">
+    <a class="primary" href="http://lattes.cnpq.br/2914705625393916" target="_blank" rel="noopener">Lattes</a>
+    <a href="https://orcid.org/0009-0002-0757-8238" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://br.linkedin.com/in/anderson-coelho-viana-60ba611b9" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/andviana" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <button id="theme" type="button" aria-label="Alternar entre tema claro e escuro">Alternar tema</button>
+</aside>
+
+<main>
+  <section id="sobre">
+    <span class="eyebrow">Sobre</span>
+    <h2>Tecnologia a serviço da pesquisa e da saúde</h2>
+    <p class="lead">Bacharel em Sistemas de Informação pela UFPA e pós-graduado em Gestão de Pessoas, com atuação em análise, desenvolvimento, suporte e manutenção de sistemas, redes e infraestrutura.</p>
+    <p class="prose">Sou analista de tecnologia da informação na <a href="https://novo.ufra.edu.br/" target="_blank" rel="noopener">Universidade Federal Rural da Amazônia (UFRA)</a>, mestrando no <a href="https://www.ppgee.propesp.ufpa.br/index.php/br/" target="_blank" rel="noopener">Programa de Pós-Graduação em Engenharia Elétrica da UFPA</a> e participo dos grupos de pesquisa SIMBIC e LNEOC, onde contribuo para a geração de conhecimento e inovações tecnológicas.</p>
+    <p class="prose">Busco aplicar a tecnologia da informação como ferramenta estratégica para a melhoria de resultados: análise e informatização de processos, métricas de monitoramento e boas práticas de programação, com foco em qualidade, manutenibilidade e escalabilidade das soluções.</p>
+  </section>
+
+  <section id="atuacao">
+    <span class="eyebrow">Atuação</span>
+    <h2>Onde estou hoje</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Profissional</span>
+        <h3>Analista de TI · UFRA</h3>
+        <p>Servidor público federal desde 2024, na Universidade Federal Rural da Amazônia.</p>
+        <a class="more" href="https://novo.ufra.edu.br/" target="_blank" rel="noopener">novo.ufra.edu.br</a>
+      </article>
+      <article class="card">
+        <span class="tag">Acadêmica</span>
+        <h3>Mestrado · PPGEE/UFPA</h3>
+        <p>Pós-graduação stricto sensu na Universidade Federal do Pará.</p>
+        <a class="more" href="https://www.ppgee.propesp.ufpa.br/index.php/br/" target="_blank" rel="noopener">Programa de Pós-Graduação</a>
+      </article>
+      <article class="card">
+        <span class="tag">Pesquisa</span>
+        <h3>LNEOC · UFPA</h3>
+        <p>Laboratório de Neurofisiologia Eduardo Osvaldo Cruz, da Universidade Federal do Pará.</p>
+        <a class="more" href="https://www.instagram.com/lneoc_ufpa/" target="_blank" rel="noopener">@lneoc_ufpa</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="trajetoria">
+    <span class="eyebrow">Trajetória</span>
+    <h2>Experiência profissional</h2>
+    <ol class="timeline">
+      <li class="now">
+        <span class="when">2024 · atual</span>
+        <h3>Analista de Tecnologia da Informação</h3>
+        <p>Universidade Federal Rural da Amazônia (UFRA) · Servidor público, 40 h</p>
+      </li>
+      <li class="now">
+        <span class="when">2024 – 2026</span>
+        <h3>Bolsista de Desenvolvimento Tecnológico Industrial (DTI-A)</h3>
+        <p>Bolsista do CNPq, nível A · Associação Beneficente Portuguesa de São Paulo (BPSP)</p>
+      </li>
+      <li>
+        <span class="when">2018 – 2024</span>
+        <h3>Analista de Tecnologia da Informação</h3>
+        <p>Universidade Federal do Sul e Sudeste do Pará (UNIFESSPA) · Servidor público</p>
+      </li>
+      <li>
+        <span class="when">2015 – 2023</span>
+        <h3>Supervisor de Ensino (tutoria)</h3>
+        <p>Unopar, Pólo Marabá</p>
+      </li>
+      <li>
+        <span class="when">2010 – 2018</span>
+        <h3>Coordenador de Tecnologia da Informação</h3>
+        <p>Grupo Futuro Educacional / Unopar Virtual</p>
+      </li>
+      <li>
+        <span class="when">2009 – 2018</span>
+        <h3>Chefe da Divisão de Informática</h3>
+        <p>Prefeitura Municipal de Marabá · Servidor público</p>
+      </li>
+      <li>
+        <span class="when">2004 – 2006</span>
+        <h3>Início de carreira em TI</h3>
+        <p>Técnico em Processamento de Dados (Bertin) e Auxiliar de CPD (Frigorífico Marabá), além de estágio como técnico em informática na UFPA.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="pesquisa">
+    <span class="eyebrow">Pesquisa e extensão</span>
+    <h2>Pesquisa, saúde e sociedade</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Extensão</span>
+        <h3>Baila Parkinson</h3>
+        <p>Participação em projeto de extensão na área da saúde voltado a pacientes com doença de Parkinson.</p>
+        <a class="more" href="https://viverbelem.com.br/projetos-page/" target="_blank" rel="noopener">Conhecer os projetos</a>
+      </article>
+      <article class="card">
+        <span class="tag">Organização</span>
+        <h3>Instituto Viva</h3>
+        <p>Membro do Conselho Administrativo de organização paraense com atuação em saúde, educação, pesquisa científica e assistência social.</p>
+        <a class="more" href="https://www.vivapara.org.br/" target="_blank" rel="noopener">vivapara.org.br</a>
+      </article>
+      <article class="card">
+        <span class="tag">Organização · 2026</span>
+        <h3>I Congresso Interdisciplinar de Neuropsicocorporeidade</h3>
+        <p>"Cérebro, Corpo e Emoções: Fundamentos Neuropsicocorporais da Aprendizagem". Realizado de 8 a 10 de julho de 2026, no Hangar Centro de Convenções, em Belém (PA), pelo Instituto Viva.</p>
+        <a class="more" href="https://doity.com.br/i-congresso-interdisciplinar-de-neuropsicocorporeidade" target="_blank" rel="noopener">Página do congresso</a>
+      </article>
+      <article class="card">
+        <span class="tag">Grupos de pesquisa</span>
+        <h3>SIMBIC e LNEOC</h3>
+        <p>Laboratório de Simulação de Biologia Computacional e Laboratório de Neurofisiologia Eduardo Osvaldo Cruz, ambos da UFPA.</p>
+        <a class="more" href="https://www.instagram.com/lneoc_ufpa/" target="_blank" rel="noopener">Siga o LNEOC</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="formacao">
+    <span class="eyebrow">Formação</span>
+    <h2>Formação e competências</h2>
+    <div class="cols">
+      <div>
+        <h3>Formação acadêmica</h3>
+        <ul class="plain">
+          <li><b>Mestrado</b> · PPGEE, UFPA (em andamento)</li>
+          <li><b>MBA em Gestão de Pessoas</b> · UNOPAR, 2011–2012</li>
+          <li><b>Bacharelado em Sistemas de Informação</b> · UFPA, 2005–2009<br>TCC: SIGMA, cadastramento georreferenciado de informações turísticas</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Áreas de atuação</h3>
+        <ul class="chips">
+          <li>Análise e desenvolvimento de sistemas</li>
+          <li>Banco de dados</li>
+          <li>Linguagens de programação</li>
+          <li>Sistemas de informação</li>
+          <li>Engenharia de software</li>
+          <li>Redes e infraestrutura</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin:32px 0 12px;font-size:1.05rem;color:var(--accent)">Cursos selecionados</h3>
+    <ul class="chips">
+      <li>Bootcamp Full Stack · IGTI (148 h)</li>
+      <li>GoStack: Node.js, ReactJS e React Native · Rocketseat (160 h)</li>
+      <li>Full Stack Angular e Spring · AlgaWorks (120 h)</li>
+      <li>React e Redux · School of Net</li>
+      <li>Symfony 4 · School of Net</li>
+      <li>Fundamentos do COBIT 2019 · ESR/RNP</li>
+      <li>Arquitetura TCP/IP · ESR/RNP</li>
+      <li>Modelagem de Processos · UNIFESSPA</li>
+    </ul>
+    <details>
+      <summary>Idiomas e eventos</summary>
+      <p class="small">Português: compreende, fala, lê e escreve bem. Inglês: compreende e lê razoavelmente, fala e escreve pouco.</p>
+      <p class="small">Participação em mais de 35 eventos, entre eles o XXVIII Congresso da Sociedade Brasileira de Computação (2008), a PHP Conference Brasil (2020) e a 4ª React Conference Brasil (2020). Organizador da II Semana de Tecnologia da Informação e Comunicação (SETIC), em 2008, e do I Congresso Interdisciplinar de Neuropsicocorporeidade, em 2026. A lista completa está no <a href="http://lattes.cnpq.br/2914705625393916" target="_blank" rel="noopener">Lattes</a>.</p>
+    </details>
+  </section>
+
+  <section id="contato">
+    <span class="eyebrow">Contato</span>
+    <h2>Perfis e redes</h2>
+    <div class="grid">
+      <article class="card"><h3>Lattes</h3><p>Currículo completo, com cursos, eventos e produção.</p><a class="more" href="http://lattes.cnpq.br/2914705625393916" target="_blank" rel="noopener">Abrir currículo</a></article>
+      <article class="card"><h3>ORCID</h3><p>0009-0002-0757-8238</p><a class="more" href="https://orcid.org/0009-0002-0757-8238" target="_blank" rel="noopener">Abrir perfil</a></article>
+      <article class="card"><h3>LinkedIn</h3><p>Rede profissional.</p><a class="more" href="https://br.linkedin.com/in/anderson-coelho-viana-60ba611b9" target="_blank" rel="noopener">Abrir perfil</a></article>
+    </div>
+  </section>
+
+  <footer>© <span id="y"></span> Anderson Coelho Viana · Informações conforme o Currículo Lattes (atualizado em 27/01/2025).</footer>
+</main>
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+(function(){
+  var root = document.documentElement, btn = document.getElementById('theme');
+  try { var s = localStorage.getItem('theme'); if (s) root.setAttribute('data-theme', s); } catch(e){}
+  btn.addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme');
+    var dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e){}
+  });
+  var links = [].slice.call(document.querySelectorAll('.menu a'));
+  var map = {}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting) { links.forEach(function(a){ a.classList.remove('on'); }); map[e.target.id].classList.add('on'); }
+      });
+    }, {rootMargin:'-30% 0px -60% 0px'});
+    Object.keys(map).forEach(function(id){ var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
